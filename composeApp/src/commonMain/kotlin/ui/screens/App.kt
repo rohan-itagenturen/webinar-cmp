@@ -58,7 +58,12 @@ fun App(
                     route = ScreenRoute.IMAGEPICKER,
                     navTransition = NavTransition()
                 ) {
-                    ImagePickerScreen(imagePicker)
+                    ImagePickerScreen(
+                        imagePicker = imagePicker,
+                        onBackPressed = {
+                            navigator.popBackStack()
+                        }
+                    )
                 }
 
                 scene(
@@ -68,7 +73,12 @@ fun App(
                     val viewModel = viewModel(ApiDemoViewModel::class) {
                         ApiDemoViewModel(userRepository)
                     }
-                    ApiDemoScreen(viewModel)
+                    ApiDemoScreen(
+                        viewModel = viewModel,
+                        onBackPressed = {
+                            navigator.popBackStack()
+                        }
+                    )
                 }
             }
         }
