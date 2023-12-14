@@ -1,4 +1,4 @@
-    rootProject.name = "WebinarCMP"
+rootProject.name = "WebinarCMP"
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
 pluginManagement {
